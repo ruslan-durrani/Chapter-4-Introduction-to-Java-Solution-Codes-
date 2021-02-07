@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        //Input code
+        System.out.print("Enter an ASCII code: ");
+        int code = input.nextInt();
+        
+        //Conversion
+        char character = (char)code;
+        
+        //Display
+        System.out.printf("The character for ASCII code %d is %c",code,character);
+    }
+}
