@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+
+        // Character input
+        System.out.print("Enter a Hex Digit: ");
+        String hex = input.next();
+
+        //Selection Character has a single intity
+        if (hex.length() != 1) {
+            System.out.println("You must enter exactly one character");
+            System.exit(1);
+        }
+        char hexChar = hex.charAt(0);
+
+        //Hex character manipulation
+        if (hexChar <='F' && hexChar >='A'){
+            int decimal = (int) hexChar - 'A' + 10;
+            System.out.println("Decimal number for hex "+hexChar+" value is : "+decimal);
+        }
+        if (hexChar <='f' && hexChar >='a'){
+            int decimal = (int) hexChar - 'a' + 10;
+            System.out.println("Decimal number for hex "+hexChar+" value is : "+decimal);
+        }
+        //this boolean condition check for digit availabilty
+        else if (Character.isDigit(hexChar))
+            System.out.println("Decimal number is : "+hexChar);
+        else
+            System.out.println("Invailid");
+    }
+}
