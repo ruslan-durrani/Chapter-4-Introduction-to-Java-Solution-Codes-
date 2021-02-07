@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        //Input character 
+        System.out.print("Enter an ASCII code: ");
+        char character = input.next().charAt(0);
+
+        //Conversion
+        int code = (int)character;
+
+        //Display
+        System.out.printf("The Unicode for the character %c is %d",character,code);
+    }
+}
