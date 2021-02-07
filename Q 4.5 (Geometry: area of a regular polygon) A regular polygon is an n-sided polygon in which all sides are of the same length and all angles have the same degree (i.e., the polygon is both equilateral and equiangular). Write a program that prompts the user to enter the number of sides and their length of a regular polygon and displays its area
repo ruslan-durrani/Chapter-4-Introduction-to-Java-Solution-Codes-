@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        //Input Side
+        System.out.print("Enter the number of side: ");
+        int n = input.nextInt();
+
+        //Side length
+        System.out.print("Enter side length: ");
+        double s = input.nextDouble();
+
+        //Formulae
+        double area = (double)n * Math.pow(s,2) / (4.0 * Math.tan(3.14d/n));
+
+        //diplay
+        System.out.printf("The area of the poligon is %.2f",area);
+    }
+}
