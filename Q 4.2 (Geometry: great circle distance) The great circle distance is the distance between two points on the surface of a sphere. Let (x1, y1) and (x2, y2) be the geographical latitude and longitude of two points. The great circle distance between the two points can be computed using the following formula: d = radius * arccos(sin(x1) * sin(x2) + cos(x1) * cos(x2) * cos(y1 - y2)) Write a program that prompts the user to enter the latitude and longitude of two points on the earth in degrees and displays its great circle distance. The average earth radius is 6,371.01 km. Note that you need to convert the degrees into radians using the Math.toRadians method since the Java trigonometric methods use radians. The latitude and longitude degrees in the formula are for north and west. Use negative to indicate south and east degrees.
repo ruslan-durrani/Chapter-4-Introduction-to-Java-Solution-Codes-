@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        
+        //Radius of Earth
+        final double radius =  6_371.01d;
+        
+        //Input point:  (Latitude and longitude) 
+        System.out.print("Enter point 1 (latitude and longitude) in degrees: ");
+        double latitudeOne = input.nextDouble();
+        double longitudeOne = input.nextDouble();
+        
+        //Input point:  (Latitude and longitude)
+        System.out.print("Enter point 2 (latitude and longitude) in degrees: ");
+        double latitudeTwo = input.nextDouble();
+        double longitudeTwo = input.nextDouble();
+        
+        //Formulae
+        double distance = radius* Math.acos(Math.sin(Math.toRadians(latitudeOne)) * Math.sin(Math.toRadians(latitudeTwo))+Math.cos(Math.toRadians(latitudeOne))*Math.cos(Math.toRadians(latitudeTwo))*Math.cos(longitudeOne-longitudeTwo));
+        //Display
+        System.out.println(distance);
+    }
+}
