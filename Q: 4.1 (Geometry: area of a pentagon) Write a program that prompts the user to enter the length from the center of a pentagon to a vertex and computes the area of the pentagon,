@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        final double PI = 3.14d;
+        Scanner input = new Scanner (System.in);
+
+        //Getting length of a side from centre
+        System.out.print("Enter the length from the center to a vertex: ");
+        double r = input.nextDouble();
+
+        //Calculating side
+        double s = 2*r*(Math.sin(PI/5));
+
+        //Formula for area of pentagon
+        double areaOfPentagon =  5*(Math.pow(s,2)) / (4*(Math.tan(PI/5)));
+
+        //Display
+        System.out.printf("The area of the pentagon is %4.2f ",areaOfPentagon);
+    }
+}
