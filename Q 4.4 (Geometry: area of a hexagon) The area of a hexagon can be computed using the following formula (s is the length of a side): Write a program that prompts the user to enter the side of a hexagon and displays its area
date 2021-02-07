@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        //Input Side
+        System.out.print("Enter the side: ");
+        double side = input.nextDouble();
+        
+        //Formulae
+        double area = 6 * Math.pow(side,2)/ (4 * Math.tan(3.14d/6));
+        //diplay
+        System.out.printf("The area of the hexagon is %.2f",area);
+    }
+}
