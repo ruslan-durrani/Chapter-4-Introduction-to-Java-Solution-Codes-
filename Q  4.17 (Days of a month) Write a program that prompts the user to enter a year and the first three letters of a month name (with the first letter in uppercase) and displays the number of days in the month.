@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        //Input Year
+        System.out.print("Enter year: ");
+        int year = input.nextInt();
+
+        //Input Month
+        System.out.print("Enter month: ");
+        String month = input.next().toLowerCase();
+        
+        switch (month){
+            case "january","jan": System.out.printf("%s %d has 31 days",month,year);break;
+            case "february","feb": if ((year % 4 == 0 && year % 100 !=0)|| (year % 400 == 0))
+                System.out.printf("%s %d has 28 days",month,year);
+            else
+                System.out.printf("%s %d has 29 days",month,year);
+            break;
+            case "march": System.out.printf("%s %d has 31 days",month,year);break;
+            case "april","apr": System.out.printf("%s %d has 30 days",month,year);break;
+            case "may": System.out.printf("%s %d has 31 days",month,year);break;
+            case "june": System.out.printf("%s %d has 30 days",month,year);break;
+            case "july": System.out.printf("%s %d has 31 days",month,year);break;
+            case "august","aug": System.out.printf("%s %d has 31 days",month,year);break;
+            case "september","sep": System.out.printf("%s %d has 30 days",month,year);break;
+            case "october","oct": System.out.printf("%s %d has 31 days",month,year);break;
+            case "november","nov": System.out.printf("%s %d has 30 days",month,year);break;
+            case "december","dec": System.out.printf("%s %d has 31 days",month,year);break;
+        }
+    }
+}
+
