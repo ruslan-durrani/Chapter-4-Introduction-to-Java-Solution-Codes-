@@ -1,0 +1,7 @@
+public class Practice{
+    public static void main(String[] args) {
+        int number = 65 + (int) (Math.random()* 27)-1;
+        System.out.println((char)number);
+    }
+}
+
