@@ -1,0 +1,24 @@
+public class Main{
+    public static void main(String[] args) {
+        Scanner input  = new Scanner (System.in);
+        
+        //Input
+        System.out.print("Enter a decimal value (0 to 15): ");
+        int decimal = input.nextInt();
+        
+        //Computation
+        if (decimal >=0 && decimal<=15) {
+            switch (decimal) {
+                case 10 -> System.out.println("The Hex value is: " + 'A');
+                case 11 -> System.out.println("The Hex value is: " + 'B');
+                case 12 -> System.out.println("The Hex value is: " + 'C');
+                case 13 -> System.out.println("The Hex value is: " + 'D');
+                case 14 -> System.out.println("The Hex value is: " + 'E');
+                case 15 -> System.out.println("The Hex value is: " + 'F');
+                default -> System.out.println("The Hex value is: " + decimal);
+            }
+        }
+        else
+            System.out.printf("%d is wrong Input",decimal); 
+    }
+}
