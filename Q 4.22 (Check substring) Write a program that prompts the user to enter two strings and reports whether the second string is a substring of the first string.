@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        //Input Strings
+        System.out.print("Enter first String s1: ");
+        String s1 = input.next();
+        System.out.print("Enter second String s2: ");
+        String s2 = input.next();
+        //----------Logic--------
+        if (s1.contains(s2) || (s1.indexOf(s2) != -1))
+            System.out.printf("%s ia a Substring of %s",s2,s1);
+        else
+            System.out.printf("%s ia not a Substring of %s",s2,s1);
+    }
+}
