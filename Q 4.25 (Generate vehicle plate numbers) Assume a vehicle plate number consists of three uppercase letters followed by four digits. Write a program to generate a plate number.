@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int randomOne = 65 + (int)(Math.random()*26);
+        int randomTwo = 65 + (int)(Math.random()*26);
+        int randomThree = 65 + (int)(Math.random()*26);
+        String vehiclePlateNumber = "" + (char)randomOne + (char)randomTwo + (char)randomThree + "-" +
+                                    (randomOne/10) + (randomTwo/10) + (randomThree/10) + (randomTwo%10);
+        System.out.println("The Vehicle plate number: "+vehiclePlateNumber);
+
+    }
+}
