@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        //City One Input
+        System.out.print("Enter first city: ");
+        String cityOne = input.next();
+
+        //First CHaracter of city one
+        char cityOneChars = Character.toUpperCase(cityOne.charAt(0));
+
+        //City Two Input
+        System.out.print("Enter second city: ");
+        String cityTwo = input.next();
+
+        //First Character of city two
+        char cityTwoChars = Character.toUpperCase(cityTwo.charAt(0));
+
+        //City Three input
+        System.out.print("Enter third city: ");
+        String cityThree = input.next();
+
+        //First Character of City Three
+        char cityThreeChars = Character.toUpperCase(cityThree.charAt(0));
+
+        //Computation Logic
+        if (cityOneChars < cityTwoChars && cityOneChars < cityThreeChars)
+            if (cityTwoChars<cityThreeChars)
+                System.out.println("The three cities in alphabetical order are: "+cityOne+" "+cityTwo+" "+cityThree);
+            else
+                System.out.println("The three cities in alphabetical order are: "+cityOne+" "+cityThree+" "+cityTwo);
+        else if (cityTwoChars < cityOneChars && cityTwoChars < cityThreeChars)
+            if (cityOneChars<cityThreeChars)
+                System.out.println("The three cities in alphabetical order are: "+cityTwo+" "+cityOne+" "+cityThree);
+            else
+                System.out.println("The three cities in alphabetical order are: "+cityTwo+ " "+ cityThree+" "+cityOne);
+        else if (cityThreeChars < cityTwoChars && cityThreeChars < cityOneChars)
+            if (cityOneChars<cityTwoChars)
+                System.out.println("The three cities in alphabetical order are: "+cityThree+" "+cityOne+" "+cityTwo);
+            else
+                System.out.println("The three cities in alphabetical order are: "+cityThree+ " "+ cityTwo+" "+cityOne);
+    }
+}
