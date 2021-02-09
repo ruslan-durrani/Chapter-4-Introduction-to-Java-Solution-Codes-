@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        //Input characters
+        System.out.print("Enter two characters: ");
+        String characters = input.next();
+
+        //first char
+        char firstCharacter= characters.charAt(0);
+
+        //second char
+        char secondCharacter= characters.charAt(1);
+
+        switch (firstCharacter){
+            case 'M' :
+                if (secondCharacter=='1')
+                    System.out.println("Mathematics Freshman");
+                else if (secondCharacter=='2')
+                    System.out.println("Mathematics sophomore");
+                else if (secondCharacter =='3')
+                    System.out.println("Mathematics junior");
+                else if (secondCharacter == '4')
+                    System.out.println("Mathematics senior");
+                break;
+            case 'I' :
+                if (secondCharacter=='1')
+                    System.out.println("Information Technology Freshman");
+                else if (secondCharacter=='2')
+                    System.out.println("Information Technology sophomore");
+                else if (secondCharacter =='3')
+                    System.out.println("Information Technology junior");
+                else if (secondCharacter == '4')
+                    System.out.println("Information Technology senior");
+                break;
+            case 'C' :
+                if (secondCharacter=='1')
+                    System.out.println("Computer Freshman");
+                else if (secondCharacter=='2')
+                    System.out.println("Computer sophomore");
+                else if (secondCharacter =='3')
+                    System.out.println("Computer junior");
+                else if (secondCharacter == '4')
+                    System.out.println("Computer senior");
+                break;
+            default: System.out.println("Invalid Input");
+        }
+    }
+}
