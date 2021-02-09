@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        //Name Input
+        System.out.print("Enter employee's name: ");
+        String name = input.next();
+        
+        //Working Hours in week
+        System.out.print("Enter number of hours worked in a week: ");
+        double numberOfHoursWorked = input.nextDouble();
+        
+        //Hourly Pay Rate
+        System.out.print("Enter hourly pay rate: ");
+        double hourlyPayRate = input.nextDouble();
+        
+        //Federal Text Withholding
+        System.out.print("Enter federal tax withholding rate: ");
+        double federalTexRate = input.nextDouble();
+        
+        //State Text
+        System.out.print("Enter state tax withholding rate: ");
+        double stateRateTax = input.nextDouble();
+        
+        //Total Weekly Pay
+        double grossPay = numberOfHoursWorked*hourlyPayRate;
+        
+        //-------------Display-------------
+        System.out.println("Employee Name: "+name);
+        System.out.println("Hours Worked: "+numberOfHoursWorked);
+        System.out.println("Pay Rate: $"+hourlyPayRate);
+        System.out.println("Gross Pay: $"+grossPay);
+        System.out.println("Deductions:");
+        
+        //Federal Withdrawal Calculations
+        double fedWithdrawal = (grossPay * (federalTexRate*100))/100.0d;
+        System.out.printf("Federal Withholding (%.1f %%): $%.2f",(federalTexRate*100.0),fedWithdrawal);
+        
+        //State Withholdings calculations
+        double stateWithdrawal = (grossPay * (stateRateTax*100.0))/100.0 ;
+        System.out.printf("\nState Withholding (%.1f %% ): $%.2f",stateRateTax*100.0,stateWithdrawal);
+        
+        //Text deduction
+        double deduction = fedWithdrawal+stateWithdrawal;
+        System.out.println("\nTotal Deduction: $"+deduction);
+        
+        //Net Pay
+        System.out.println("Net Pay: $"+(grossPay-deduction));
+    }
+}
