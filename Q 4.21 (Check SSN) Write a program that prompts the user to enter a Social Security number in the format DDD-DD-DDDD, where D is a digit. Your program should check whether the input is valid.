@@ -1,0 +1,25 @@
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        //Input SSN code
+        System.out.print("Enter a SSN: ");
+        String ssn = input.next();
+        
+        //Finding the length from start to the first hyphenate
+        int firstHiphen = ssn.indexOf("-");
+        //String from start to the first hyphenate
+        String firstSubString = ssn.substring(0,firstHiphen);
+        //Finding the index of last hyphenate
+        int lastHiphen = ssn.lastIndexOf("-");
+        //Finding the length string from previous hyphenate to the last hyphenate
+        String midSubString = ssn.substring(firstHiphen+1,lastHiphen);
+        //Last String after the hyphenate
+        String lastSubstring = ssn.substring(lastHiphen+1);
+        //------------------------------------------------
+        if ((firstSubString.length()==3)&&(midSubString.length()==2)&&(lastSubstring.length()==4))
+            System.out.printf("%s is a valid social security number",ssn);
+        else
+            System.out.printf("%s is an invalid social security number",ssn);
+    }
+}
