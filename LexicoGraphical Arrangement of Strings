@@ -1,0 +1,13 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    String s1 = "Khan";
+    String s2 = "Ruslan";
+    if ( s1.compareTo(s2) == 0)
+      System.out.println("Equals");
+    else if ( s1.compareTo(s2)<0)
+      System.out.println("Order: "+s1+" and "+s2);
+    else if ( s1.compareTo(s2)>0)
+    System.out.println("Order: "+s2+" and "+s1);
+  }
+}
