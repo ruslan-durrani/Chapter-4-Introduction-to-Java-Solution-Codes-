@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner (System.in);
+    System.out.print("Enter String: ");
+    String name = input.nextLine();
+    System.out.printf("\nYou Entered\n%s",name);
+    //Subdividing strings
+    int space = name.indexOf(' ');
+    String firstPart = name.substring(0,space);
+    String secondPart = name.substring(space+1);
+    System.out.printf("\nSubstring 1: %s\nSubstring 2: %s",firstPart,secondPart);
+
+  }
+}
